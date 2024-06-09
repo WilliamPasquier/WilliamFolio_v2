@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Geist';
+    src: url(/resources/fonts/GeistVF.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'Geist-Regular';
+    src: url(/resources/fonts/geist/Geist-Regular.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Geist-Bold';
+    src: url(/resources/fonts/geist/Geist-Bold.otf) format("opentype");
+}
