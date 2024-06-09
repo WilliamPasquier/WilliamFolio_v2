@@ -29,6 +29,7 @@ A new and modern version of my website presenting myself, my projects and some o
 | Dark pastel green | ![#32C849](https://via.placeholder.com/10/32C849?text=+) #32C849 |
 | Dark pastel green | ![#22AC32](https://via.placeholder.com/10/22AC32?text=+) #22AC32 |
 
+Color palette generated with [Coolors](https://coolors.co/)
 
 ## Authors
 
