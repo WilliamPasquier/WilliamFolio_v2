@@ -1,0 +1,18 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__intro {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.hero__title {
+    font-size: clamp(2rem, 5vw, 4.75rem);
+}
+
+.hero__intro, .hero__title {
+    padding: calc(var(--base-spacer) / 2) var(--base-spacer);
+}

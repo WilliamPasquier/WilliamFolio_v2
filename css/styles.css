@@ -1,7 +1,8 @@
 *{
 	margin: 0;
 	padding: 0;
-    font-family: 'Geist-Regular'
+    font-family: 'Geist-Regular';
+    color: var(--night)
 }
 
 html {
@@ -9,3 +10,32 @@ html {
     scroll-padding-top: 102px;
     overflow-x: hidden;
 }
+
+body::before {
+	--size: clamp(30px, 10vw, 45px);
+	content: '';
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	background: linear-gradient(
+				90deg,
+				var(--antiflash-white) 1px,
+				transparent 1px var(--size)
+			)
+			0 -5vmin / var(--size) var(--size),
+		linear-gradient(var(--antiflash-white) 1px, transparent 1px var(--size)) 0 -5vmin / var(
+				--size
+			) var(--size);
+	top: 0;
+	z-index: -1;
+}
+
+main {
+    width: 100%;
+}
+
+/* General styles */
+.bold {
+    font-family: 'Geist-Bold';
+}
+
