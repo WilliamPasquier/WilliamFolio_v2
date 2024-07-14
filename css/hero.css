@@ -1,8 +1,9 @@
 .hero {
+    height: 100dvh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin: max(var(--lg-spacer), 3vh) 0;
 }
 
 .hero__intro {
