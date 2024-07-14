@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: max(var(--lg-spacer), 3vh) 0;
+    gap: max(5%, 1rem);
+    margin: clamp(1rem, 5vw, var(--lg-spacer)) 0;
 }
 
 .hero__intro {
@@ -16,4 +17,8 @@
 
 .hero__intro, .hero__title {
     padding: calc(var(--base-spacer) / 2) var(--base-spacer);
+}
+
+.hero__container {
+    width: 100%;
 }
