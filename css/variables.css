@@ -20,7 +20,8 @@
     --blue-crayola: #1879faff;
 
     /* Gradients */
-    --gray-gradient: linear-gradient(30deg, var(--platinum) 0%, var(--antiflash-white) 100%);
+    --gray-gradient: linear-gradient(30deg, var(--platinum) 60%, var(--antiflash-white) 100%);
+    --hero-gradiant: linear-gradient(270deg, rgba(234,227,255,1) 0%, rgba(242,245,255,1) 100%);
 
      /* Font sizes */
      --title-font: 4.688rem;

@@ -1,36 +1,37 @@
 .finder {
-    width: 70%;
+    width: 75%;
     display: flex;
     border: solid 1px var(--platinum);
     border-radius: var(--base-padding);
-    margin-inline: auto;
 }
 
 .finder__nav, .finder__container {
-    padding: var(--base-spacer) calc(var(--base-spacer) + 0.5rem);
+    padding-top: clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));
+    padding-bottom: clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));
+    padding-right: clamp(10px, 1vw, calc(var(--base-spacer) + 0.5rem));
+    padding-left: clamp(10px, 1vw, calc(var(--base-spacer) + 0.5rem));
 }
 
 .finder__nav {
     flex-grow: 0;
     border-radius: var(--base-padding) 0 0 var(--base-padding);
     background: var(--gray-gradient);
+    transition: all 250ms ease-out;
 }
 
 .finder__nav-header, .finder__container-header {
-    height: 30px;
-    margin-bottom: var(--base-spacer);
+    height: clamp(18px, 2vw, 30px);
+    margin-bottom: clamp(12px, 1vw, var(--base-spacer));;
 }
 
 .finder__nav-header {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: clamp(2px, 1vw, 6px);
 }
 
 .finder__nav-btn {
-    /* width: 14px;
-    height: 14px; */
-    width: 14px;
+    width: clamp(8px, 1vw, 14px);
     aspect-ratio: 1;
     border-radius: 100%;
 }
@@ -52,8 +53,46 @@
 
 .finder__nav-title {
     color: var(--gray);
-    font-size: 12px;
+    font-size: clamp(8px, 1vw, 12px);
     font-weight: 100;
+}
+
+.finder__nav-projects {
+    list-style: none;
+}
+
+.finder__nav-project {
+    display: flex;
+    align-items: center;
+    gap: clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));
+    color: var(--silver);
+    font-size: clamp(11px, 1vw, 14px);
+    padding: min(calc(var(--base-spacer) / 2), 1vw) min(var(--base-spacer), 1vw);
+    margin-top: calc(var(--base-spacer) / 2);
+    border: unset;
+    background: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 250ms ease-out;
+}
+
+.finder__nav-project:hover {
+    color: var(--davys-gray);
+    transition: all 250ms ease-out;
+}
+
+.finder__nav-project--active {
+    color: var(--davys-gray);
+    background-color: var(--silver-2);
+}
+
+.finder__nav-project-icon {
+    font-size: clamp(22px, 2vw, var(--subtitle-font));
+    color: var(--gray);
+}
+
+.finder__nav-project-title {
+    white-space: nowrap;
 }
 
 .finder__container {
@@ -70,24 +109,48 @@
 .finder__header-info, .finder__content-btns{
     display: flex;
     align-items: center;
-    gap: var(--base-spacer);
-}
-
-.finder__header-btns {
-    display: flex;
-    gap: var(--base-padding);
+    gap: clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));;
 }
 
 .finder__select-btn, .finder__content-btn {
     padding: 4px 8px;
+    padding: clamp(2px, 1vw, 4px) clamp(4px, 1vw, 8px);
 }
 
 .finder__header-title {
-    font-size: var(--base-spacer);
+    font-size: clamp(10px, 1vw, 16px);
     color: var(--gray);
     font-weight: 100;
 }
 
 .finder__select-btn, .finder__content-btn {
     color: var(--silver);
+    font-size: clamp(11px, 1vw, 16px);
+}
+
+.finder__container-footer {
+    margin-top: clamp(6px, 1vw, 12px);
+}
+
+.finder__projects-numbers {
+    color: var(--silver);
+    font-size: clamp(8px, 1vw, var(--content-font));
+    font-weight: 100;
+}
+
+@media (max-width: 1024px) {
+    .finder {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    /* .finder {
+        width: 90%;
+    } */
+
+    .finder__nav-project-title {
+        display: none;
+    }
 }
