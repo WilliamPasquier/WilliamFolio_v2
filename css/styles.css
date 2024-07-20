@@ -16,7 +16,7 @@ html {
 }
 
 body::before {
-	--size: clamp(30px, 10vw, 45px);
+	--size: clamp(30px, 4vw, 45px);
 	content: '';
 	height: 100%;
 	width: 100%;

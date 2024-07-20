@@ -20,7 +20,6 @@
     padding-bottom: clamp(calc(var(--base-spacer) / 4), 1vw, calc(var(--base-spacer) / 2));
     padding-right: clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));
     padding-left: clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));
-    /* padding: calc(var(--base-spacer) / 2) var(--base-spacer); */
 }
 
 .hero__container {
