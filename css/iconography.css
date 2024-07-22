@@ -23,13 +23,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.wf-icon-william_logo:before {
+.wf-icon-ntxproject:before {
+  content: "\e909";
+}
+.wf-icon-kairos:before {
+  content: "\e908";
+}
+.wf-icon-mercure:before {
+  content: "\e907";
+}
+.wf-icon-easyleague:before {
+  content: "\e906";
+}
+.wf-icon-williamfolio:before {
   content: "\e905";
 }
 .wf-icon-williamfolio_v2:before {
   content: "\e904";
 }
-.wf-icon-williamfolio:before {
+.wf-icon-william_logo:before {
   content: "\e903";
 }
 .wf-icon-magnifying_glass:before {
