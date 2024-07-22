@@ -123,7 +123,7 @@
     gap: clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));
     padding: min(calc(var(--base-spacer) / 2), 1vw) min(var(--base-spacer), 1vw);
     border: unset;
-    border-radius: 4px;
+    border-radius: 8px;
     color: var(--gray);
     font-size: clamp(11px, 1vw, 14px);
     background: unset;
@@ -153,6 +153,7 @@
 } */
 
 .finder__nav-project-icon {
+    width: 2rem;
     font-size: clamp(22px, 2vw, var(--subtitle-font));
     color: var(--gray);
 }
