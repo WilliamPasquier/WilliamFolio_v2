@@ -24,32 +24,38 @@
 }
 
 .wf-icon-ntxproject:before {
-  content: "\e909";
+  content: "\e90b";
 }
 .wf-icon-kairos:before {
-  content: "\e908";
+  content: "\e90a";
 }
 .wf-icon-mercure:before {
-  content: "\e907";
+  content: "\e909";
 }
 .wf-icon-easyleague:before {
-  content: "\e906";
+  content: "\e908";
 }
 .wf-icon-williamfolio:before {
-  content: "\e905";
+  content: "\e907";
 }
 .wf-icon-williamfolio_v2:before {
-  content: "\e904";
+  content: "\e906";
 }
 .wf-icon-william_logo:before {
-  content: "\e903";
-}
-.wf-icon-magnifying_glass:before {
-  content: "\e902";
+  content: "\e905";
 }
 .wf-icon-previous_arrow:before {
-  content: "\e901";
+  content: "\e904";
 }
 .wf-icon-next_arrow:before {
+  content: "\e903";
+}
+.wf-icon-window_layout:before {
+  content: "\e902";
+}
+.wf-icon-double_arrow:before {
+  content: "\e901";
+}
+.wf-icon-magnifying_glass:before {
   content: "\e900";
 }

@@ -1,5 +1,5 @@
 .finder {
-    width: 75%;
+    width: 60%;
     display: flex;
     border: solid 1px var(--platinum);
     border-radius: var(--base-padding);
@@ -174,10 +174,16 @@
     user-select: none;
 }
 
-.finder__header-info, .finder__content-btns{
+.finder__header-info {
     display: flex;
     align-items: center;
     gap: clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));;
+}
+
+.finder__content-btns {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--base-spacer) / 2)
 }
 
 .finder__select-btn, .finder__content-btn {
@@ -207,12 +213,17 @@
     user-select: none;
 }
 
+@media (max-width: 1366px) {
+    .finder {
+        width:70%;
+    }
+}
+
 @media (max-width: 1024px) {
     .finder {
         width: 80%;
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .finder__nav-project-title {
