@@ -2,15 +2,26 @@
 
 var thumbnailProjects = undefined;
 var thumbnailImages = undefined;
+var navItems = undefined;
+var rotation = undefined;
 
+/**
+ * All events
+ */
 const finderEvents = () => {
   getData();
+  hoveringDetection();
 };
+
 
 const getData = () => {
   readJSON("/resources/json/hero.json", createHeroFinder);
 };
 
+/**
+ * Create hero finder content from JSON data.
+ * @param {*} data - Data retrieved from JSON.
+ */
 const createHeroFinder = (data) => {
   thumbnailProjects = data;
 
@@ -57,14 +68,18 @@ const createHeroFinder = (data) => {
   footer.innerHTML = "";
   footer.insertAdjacentHTML("beforeend", numbers);
 
-  const navItems = document.querySelectorAll(".finder__nav-project");
+  navItems = document.querySelectorAll(".finder__nav-project");
   thumbnailImages = document.querySelectorAll(".project-thumbnail");
 
   getThumbnails(0);
-  navSelection(navItems);
-  rotationSelection(navItems);
+  navSelection();
+  rotationSelection();
 };
 
+/**
+ * Get image and project info to display it.
+ * @param {*} id - Thumbnail id.
+ */
 const getThumbnails = (id) => {
   const thumbnail = thumbnailProjects[id];
   const heroFinder = document.querySelector("#hero-finder");
@@ -87,7 +102,10 @@ const getThumbnails = (id) => {
   footer.insertAdjacentHTML("beforeend", numbers);
 };
 
-const navSelection = (navItems) => {
+/**
+ * Add listeners to all navigation buttons.
+ */
+const navSelection = () => {
   if (navItems.length <= 0) {
     console.error("No project item found");
     return;
@@ -110,8 +128,11 @@ const navSelection = (navItems) => {
   }
 };
 
-const rotationSelection = (navItems) => {
-  setInterval(() => {
+/**
+ * Create rotation interval of all the thumbnails.
+ */
+const rotationSelection = () => {
+  rotation = setInterval(() => {
     for (let i = 0; i < navItems.length; i++) {
       if (i + 1 == navItems.length) {
         navItems[i].setAttribute("data-active", "false");
@@ -128,4 +149,19 @@ const rotationSelection = (navItems) => {
       }
     }
   }, 5000);
+};
+
+/**
+ * Pause inteval on hover.
+ */
+const hoveringDetection = () => {
+  const navigation = document.querySelector("#hero-nav");
+
+  navigation.addEventListener("mouseover", () => {
+    clearInterval(rotation);
+  });
+
+  navigation.addEventListener("mouseout", () => {
+    rotationSelection(navItems);
+  });
 };

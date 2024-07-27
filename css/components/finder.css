@@ -70,6 +70,10 @@
     z-index: 2; */
 }
 
+.finder__nav-projects li {
+    cursor: pointer;
+}
+
 .finder__nav-projects:has(.finder__nav-project:is(:focus-visible, :hover)) {
     --intent: 1;
 }   
@@ -153,7 +157,7 @@
 } */
 
 .finder__nav-project-icon {
-    width: 2rem;
+    width: 1,5rem;
     font-size: clamp(22px, 2vw, var(--subtitle-font));
     color: var(--gray);
 }
