@@ -1,0 +1,44 @@
+[
+    {
+        "title": "WilliamFolio V2",
+        "icon": "williamfolio_v2",
+        "thumbnail": "williamfolio_v2/williamfolio_v2.png",
+        "thumbnailMobile": "williamfolio_v2/williamfolio_v2_mobile.png",
+        "alt": "William Folio portfolio v1 hero section"
+    },
+    {
+        "title": "WilliamFolio",
+        "icon": "williamfolio",
+        "thumbnail": "williamfolio_v1/williamfolio_v1.png",
+        "thumbnailMobile": "williamfolio_v1/williamfolio_v1_mobile.png",
+        "alt": "William Folio portfolio v2 hero section"
+    },
+    {
+        "title": "EasyLeague",
+        "icon": "easyleague",
+        "thumbnail": "easyleague/easyleague.png",
+        "thumbnailMobile": "easyleague/easyleague_mobile.png",
+        "alt": "EasyLeague home page"
+    },
+    {
+        "title": "Mercure",
+        "icon": "mercure",
+        "thumbnail": "mercure/mercure.png",
+        "thumbnailMobile": "mercure/mercure_mobile.png",
+        "alt": "Mercure home page"
+    },
+    {
+        "title": "Kairos",
+        "icon": "kairos",
+        "thumbnail": "kairos/kairos.png",
+        "thumbnailMobile": "kairos/kairos_mobile.png",
+        "alt": "Kairos login page"
+    },
+    {
+        "title": "NTX Project",
+        "icon": "ntxproject",
+        "thumbnail": "ntxproject/ntxproject.png",
+        "thumbnailMobile": "ntxproject/ntxproject_mobile.png",
+        "alt": "NTX Project home page"
+    }
+]

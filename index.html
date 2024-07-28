@@ -9,13 +9,72 @@
 
         <!-- Import JavaScript files / libraries -->
         <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/components/finder.js"></script>
 
         <!-- Import CSS files -->
         <link rel="stylesheet" type="text/css" href="css/styles.css"/>
         <link rel="stylesheet" type="text/css" href="css/variables.css"/>
+        <link rel="stylesheet" type="text/css" href="css/iconography.css"/>
         <link rel="stylesheet" type="text/css" href="css/fonts.css"/>
+        <link rel="stylesheet" type="text/css" href="css/hero.css"/>
+        <link rel="stylesheet" type="text/css" href="css/components/finder.css"/>
+        <link rel="stylesheet" type="text/css" href="css/components/hero-skeleton.css"/>
     </head>
     <body>
-
+        <main>
+            <!-- Hero section -->
+            <section id="home" class="hero">
+                <center class="hero__header">
+                    <p class="hero__intro">Hi, I'm William Pasquier and I'm a</p>
+                    <h1 class="hero__title bold">Software Developer</h1>
+                </center>
+                <div id="project-hero" class="hero__container">
+                    <div id="hero-finder" class="finder shadow">
+                        <aside class="finder__nav">
+                            <div class="finder__nav-header">
+                                <div class="finder__nav-btn finder__nav-close"></div>
+                                <div class="finder__nav-btn finder__nav-reduce"></div>
+                                <div class="finder__nav-btn finder__nav-resize"></div>
+                            </div>
+                            <h3 class="finder__nav-title">Projects</h3>
+                            <nav id="hero-nav" class="finder__nav-content">
+                                <ol class="skeleton__nav-projects">
+                                    <li class="skeleton__nav-project skeleton__animation skeleton__animation--darker"></li>
+                                    <li class="skeleton__nav-project skeleton__animation skeleton__animation--darker"></li>
+                                    <li class="skeleton__nav-project skeleton__animation skeleton__animation--darker"></li>
+                                    <li class="skeleton__nav-project skeleton__animation skeleton__animation--darker"></li>
+                                    <li class="skeleton__nav-project skeleton__animation skeleton__animation--darker"></li>
+                                </ol>
+                                <!-- Navigation buttons -->
+                            </nav>
+                        </aside>
+                        <div class="finder__container">
+                            <div class="finder__container-header">
+                                <div class="finder__header-info">
+                                    <div class="finder__header-btns">
+                                        <i class="finder__select-btn wf-icon-previous_arrow"></i>
+                                        <i class="finder__select-btn wf-icon-next_arrow"></i>
+                                    </div>
+                                    <h2 class="finder__header-title">My projects</h2>
+                                </div>
+                                <div class="finder__content-btns">
+                                    <i class="finder__content-btn wf-icon-window_layout"></i>
+                                    <i class="finder__content-btn wf-icon-double_arrow"></i>
+                                    <i class="finder__content-btn wf-icon-magnifying_glass"></i>
+                                </div>
+                            </div>
+                            <div class="finder__container-content">
+                                <div class="skeleton__thumbnail skeleton__animation"></div>
+                                <!-- Images container -->
+                            </div>
+                            <div class="finder__container-footer">
+                                <!-- Footer -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 </html>

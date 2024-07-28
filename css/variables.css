@@ -1,16 +1,45 @@
 /* CSS HSL */
 :root {
-    --night: hsla(0, 0%, 7%, 1);
-    --davys-gray: hsla(0, 0%, 28%, 1);
-    --gray: hsla(0, 0%, 49%, 1);
-    --silver: hsla(0, 0%, 73%, 1);
-    --platinum: hsla(0, 0%, 89%, 1);
-    --antiflash-white: hsla(0, 0%, 94%, 1);
-    --white: hsla(0, 0%, 100%, 1);
-    --bittersweet: hsla(1, 97%, 65%, 1);
-    --imperial-red: hsla(1, 72%, 57%, 1);
-    --xanthous: hsla(40, 98%, 62%, 1);
-    --hunyadi-yellow: hsla(38, 73%, 53%, 1);
-    --dark-pastel-green: hsla(129, 60%, 49%, 1);
-    --dark-pastel-green-2: hsla(127, 67%, 40%, 1);
+    /* Colors */
+    /* Coolors : https://coolors.co/131313-484848-7d7d7d-b9b9b9-cecece-e3e3e3-efefef-ffffff */
+    /* Coolors : https://coolors.co/fc5652-e04542-fdbd3e-dfa031-32c849-22ac32-1879fa */
+    --night: #131313ff;
+    --davys-gray: #484848ff;
+    --gray: #7d7d7dff;
+    --silver: #b9b9b9ff;
+    --silver-2: #cececeff;
+    --platinum: #e3e3e3ff;
+    --antiflash-white: #efefefff;
+    --white: #ffffffff;
+    --bittersweet: #fc5652ff;
+    --imperial-red: #e04542ff;
+    --xanthous: #fdbd3eff;
+    --hunyadi-yellow: #dfa031ff;
+    --dark-pastel-green: #32c849ff;
+    --dark-pastel-green-2: #22ac32ff;
+    --blue-crayola: #1879faff;
+
+    /* Gradients */
+    --gray-gradient: linear-gradient(30deg, var(--platinum) 60%, var(--antiflash-white) 100%);
+    --hero-gradiant: linear-gradient(270deg, rgba(234,227,255,1) 0%, rgba(242,245,255,1) 100%);
+
+     /* Font sizes */
+     --title-font: 4.688rem;
+     --subtitle-font: 1.5rem;
+ 
+     --tablet-title: 3rem;
+     --tablet-subtitle: 1.25rem;
+ 
+     --mobile-title: 2rem;
+     --mobile-subtitle: 1rem;
+ 
+     --content-font: 0.875rem;
+
+     /* Spacer sizes */
+    --xl-spacer: 7.5rem;
+    --lg-spacer: 4.5rem;
+    --md-spacer: 3.5rem;
+    --sm-spacer: 2rem;
+    --base-spacer: 1rem;
+    --base-padding: 0.75rem;
 }
