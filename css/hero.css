@@ -37,22 +37,3 @@
 .project-active {
     display: block;
 }
-
-.thumbnail-skeleton {
-    position: relative;
-}
-
-.thumbnail-skeleton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* aspect-ratio: 16/9; */
-    z-index: 10;
-    border-radius: var(--base-padding);
-    background: linear-gradient(90deg, var(--silver-2), var(--antiflash-white), var(--silver-2));
-    background-size: 200%;
-    animation: skeleton 1s infinite reverse;
-}

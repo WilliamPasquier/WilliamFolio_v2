@@ -17,7 +17,6 @@
     border-radius: var(--base-padding) 0 0 var(--base-padding);
     background: var(--gray-gradient);
     transition: all 250ms ease-out;
-    /* position: relative; */
 }
 
 .finder__nav-header, .finder__container-header {
@@ -74,51 +73,6 @@
     cursor: pointer;
 }
 
-/* .finder__nav-projects:has(.finder__nav-project:is(:focus-visible, :hover)) {
-    --intent: 1;
-} */
-
-/* .finder__nav-projects::before, 
-.finder__nav-projects::after {
-    --transition: 250ms;
-    content: "";
-	position: fixed;
-	top: calc(var(--item-active-y) * 1px);
-	left: calc(var(--item-active-x) * 1px);
-	height: calc(var(--item-active-height) * 1px);
-	width: calc(var(--item-active-width) * 1px);
-	opacity: var(--intent, 0);
-	z-index: -1;
-	border-radius: 4px;
-    background-color: var(--platinum);
-    transition:
-		all var(--transition),
-		top var(--transition),
-		left var(--transition),
-		height var(--transition),
-		opacity var(--transition),
-		color var(--transition),
-		width var(--transition);
-	transition-timing-function: 
-		linear(
-			0 0%, 0.2342 12.49%, 0.4374 24.99%,
-			0.6093 37.49%, 0.6835 43.74%,
-			0.7499 49.99%, 0.8086 56.25%,
-			0.8593 62.5%, 0.9023 68.75%, 0.9375 75%,
-			0.9648 81.25%, 0.9844 87.5%,
-			0.9961 93.75%, 1 100%
-		);
-} */
-
-/* .finder__nav-projects::after {
-	top: calc(var(--item-active-y) * 1px);
-	left: calc(var(--item-active-x) * 1px);
-	height: calc(var(--item-active-height) * 1px);
-	width: calc(var(--item-active-width) * 1px);
-	opacity: 1;
-	background-color: var(--silver-2);
-	view-transition-name: target;
-} */
 
 .finder__nav-project {
     display: flex;
@@ -145,16 +99,6 @@
 .finder__nav-project:hover {
     background-color: var(--silver-2);
 }
-
-/* .finder__nav-project:hover {
-    color: var(--davys-gray);
-    transition: all 250ms ease-out;
-}
-
-.finder__nav-project--active {
-    color: var(--davys-gray);
-    background-color: var(--silver-2);
-} */
 
 .finder__nav-project-icon {
     width: 1,5rem;
@@ -206,18 +150,6 @@
     font-size: clamp(11px, 1vw, 16px);
 }
 
-/* .finder__container-content {
-
-} */
-
-/* .finder__container-content::before {
-    content: '';
-    display: block;
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: var(--base-padding);
-    background: linear-gradient(90deg, var(--silver-2), var(--antiflash-white), var(--silver-2));
-} */
 
 .finder__container-footer {
     margin-top: clamp(6px, 1vw, 12px);
@@ -247,50 +179,3 @@
         display: none;
     }
 }
-
-/* Targeting */
-/* @supports(anchor-name: --a) { 
-    .finder__nav-content { 
-        --anchor: var(--item-active); 
-    }
-
-    .finder__nav-content li:nth-of-type(1) { anchor-name: --item-1; }
-	.finder__nav-content li:nth-of-type(2) { anchor-name: --item-2; }
-	.finder__nav-content li:nth-of-type(3) { anchor-name: --item-3; }
-	.finder__nav-content li:nth-of-type(4) { anchor-name: --item-4; }
-	.finder__nav-content li:nth-of-type(5) { anchor-name: --item-5; }
-	.finder__nav-content li:nth-of-type(6) { anchor-name: --item-6; }
-
-	.finder__nav-content:has(li:nth-of-type(1) .finder__nav-project:is(:hover, :focus-visible)) { --anchor: --item-1; }
-	.finder__nav-content:has(li:nth-of-type(2) .finder__nav-project:is(:hover, :focus-visible)) { --anchor: --item-2; }
-	.finder__nav-content:has(li:nth-of-type(3) .finder__nav-project:is(:hover, :focus-visible)) { --anchor: --item-3; }
-	.finder__nav-content:has(li:nth-of-type(4) .finder__nav-project:is(:hover, :focus-visible)) { --anchor: --item-4; }
-	.finder__nav-content:has(li:nth-of-type(5) .finder__nav-project:is(:hover, :focus-visible)) { --anchor: --item-5; }
-	.finder__nav-content:has(li:nth-of-type(6) .finder__nav-project:is(:hover, :focus-visible)) { --anchor: --item-6; }
-
-	.finder__nav-content:has(li:nth-of-type(1) .finder__nav-project[data-active="true"]) { --target: --item-1; }
-	.finder__nav-content:has(li:nth-of-type(2) .finder__nav-project[data-active="true"]) { --target: --item-2; }
-	.finder__nav-content:has(li:nth-of-type(3) .finder__nav-project[data-active="true"]) { --target: --item-3; }
-	.finder__nav-content:has(li:nth-of-type(4) .finder__nav-project[data-active="true"]) { --target: --item-4; }
-	.finder__nav-content:has(li:nth-of-type(5) .finder__nav-project[data-active="true"]) { --target: --item-5; }
-	.finder__nav-content:has(li:nth-of-type(6) .finder__nav-project[data-active="true"]) { --target: --item-6; }
-
-    .finder__nav-projects::before {
-		left: anchor(var(--anchor) left);
-		top: anchor(var(--anchor) top);
-		width: anchor-size(var(--anchor) width);
-		height: anchor-size(var(--anchor) height);
-	}
-
-	.finder__nav-projects::after {
-		left: anchor(var(--target) left);
-		top: anchor(var(--target) top);
-		width: anchor-size(var(--target) width);
-		height: anchor-size(var(--target) height);
-	}
-} 
-
-::view-transition-group(target),
-::view-transition-group(item) {
-	mix-blend-mode: normal;
-} */
