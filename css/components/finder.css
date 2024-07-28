@@ -65,14 +65,11 @@
     list-style: none;
     touch-action: none;
     position: relative;
-    /* position: fixed;
-    z-index: 2; */
 }
 
 .finder__nav-projects li {
     cursor: pointer;
 }
-
 
 .finder__nav-project {
     display: flex;
