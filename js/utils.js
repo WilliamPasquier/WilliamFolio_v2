@@ -12,5 +12,3 @@ const readJSON = (JSONUrl, callback) => {
 
     xhr.send();
 }
-
-const isHovered = e => e.parentElement.querySelector(':hover') === e;

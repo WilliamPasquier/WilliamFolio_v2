@@ -74,9 +74,9 @@
     cursor: pointer;
 }
 
-.finder__nav-projects:has(.finder__nav-project:is(:focus-visible, :hover)) {
+/* .finder__nav-projects:has(.finder__nav-project:is(:focus-visible, :hover)) {
     --intent: 1;
-}   
+} */
 
 /* .finder__nav-projects::before, 
 .finder__nav-projects::after {
@@ -110,7 +110,7 @@
 		);
 } */
 
-.finder__nav-projects::after {
+/* .finder__nav-projects::after {
 	top: calc(var(--item-active-y) * 1px);
 	left: calc(var(--item-active-x) * 1px);
 	height: calc(var(--item-active-height) * 1px);
@@ -118,7 +118,7 @@
 	opacity: 1;
 	background-color: var(--silver-2);
 	view-transition-name: target;
-}
+} */
 
 .finder__nav-project {
     display: flex;
@@ -205,6 +205,19 @@
     color: var(--silver);
     font-size: clamp(11px, 1vw, 16px);
 }
+
+/* .finder__container-content {
+
+} */
+
+/* .finder__container-content::before {
+    content: '';
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: var(--base-padding);
+    background: linear-gradient(90deg, var(--silver-2), var(--antiflash-white), var(--silver-2));
+} */
 
 .finder__container-footer {
     margin-top: clamp(6px, 1vw, 12px);

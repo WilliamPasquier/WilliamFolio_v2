@@ -9,10 +9,11 @@ var rotation = undefined;
  * All events
  */
 const finderEvents = () => {
-  getData();
-  hoveringDetection();
+  setTimeout(() => {
+    getData();
+    hoveringDetection();
+  }, 2000);
 };
-
 
 const getData = () => {
   readJSON("/resources/json/hero.json", createHeroFinder);
@@ -26,8 +27,8 @@ const createHeroFinder = (data) => {
   thumbnailProjects = data;
 
   const heroFinder = document.querySelector("#hero-finder");
-  const nav = heroFinder.querySelector(".finder__nav-projects");
-  const container = heroFinder.querySelector(".finder__container-content");
+  const nav = heroFinder.querySelector("#hero-nav");
+  const content = heroFinder.querySelector(".finder__container-content");
   const footer = heroFinder.querySelector(".finder__container-footer");
   let thumbnailNavButtons = "";
   let numbers = "";
@@ -62,9 +63,14 @@ const createHeroFinder = (data) => {
     </picture>`;
   });
 
-  nav.insertAdjacentHTML("beforeend", thumbnailNavButtons);
-  container.innerHTML = "";
-  container.insertAdjacentHTML("beforeend", images);
+  nav.innerHTML = "";
+  nav.insertAdjacentHTML(
+    "beforeend",
+    `<ol class="finder__nav-projects">${thumbnailNavButtons}</ol>`
+  );
+  content.innerHTML = "";
+  content.insertAdjacentHTML("beforeend", images);
+  // content.insertAdjacentHTML("afterend", `<div class="skeleton__thumbnail skeleton__animation"></div>`);
   footer.innerHTML = "";
   footer.insertAdjacentHTML("beforeend", numbers);
 

@@ -9,6 +9,10 @@
 	/* border: solid 1px greenyellow; */
 }
 
+img:not([alt]) {
+	border: 1px solid purple;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 102px;
