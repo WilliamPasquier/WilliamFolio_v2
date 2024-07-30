@@ -41,16 +41,7 @@ body::before {
 
 		var(--hero-gradiant);
 
-	/* background: linear-gradient(
-				90deg,
-				var(--antiflash-white) 1px,
-				transparent 1px var(--size)
-			)
-			0 -5vmin / var(--size) var(--size),
-		linear-gradient(var(--antiflash-white) 1px, transparent 1px var(--size)) 0 -5vmin / var(
-				--size
-			) var(--size); */
-	mask: linear-gradient(0deg, transparent 40%, white);
+	mask: linear-gradient(0deg, transparent 30%, var(--white));
 	top: 0;
 	z-index: -1;
 }

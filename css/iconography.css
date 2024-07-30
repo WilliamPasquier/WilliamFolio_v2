@@ -23,6 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.wf-icon-globe:before {
+  content: "\e90c";
+}
 .wf-icon-ntxproject:before {
   content: "\e90b";
 }

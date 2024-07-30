@@ -70,7 +70,6 @@ const createHeroFinder = (data) => {
   );
   content.innerHTML = "";
   content.insertAdjacentHTML("beforeend", images);
-  // content.insertAdjacentHTML("afterend", `<div class="skeleton__thumbnail skeleton__animation"></div>`);
   footer.innerHTML = "";
   footer.insertAdjacentHTML("beforeend", numbers);
 
