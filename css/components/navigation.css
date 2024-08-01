@@ -1,20 +1,46 @@
+@property --expanded {
+    syntax: '<number>';
+	inherits: true;
+	initial-value: 0;
+}
+
+@property --active {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #7d7d7d;
+}
+
+:root {
+    --elastic: linear(
+        0 0%, 0.0012 14.95%, 0.0089 22.36%,
+        0.0297 28.43%, 0.0668 33.43%,
+        0.0979 36.08%, 0.1363 38.55%,
+        0.2373 43.07%, 0.3675 47.01%,
+        0.5984 52.15%, 0.7121 55.23%,
+        0.8192 59.21%, 0.898 63.62%,
+        0.9297 66.23%, 0.9546 69.06%,
+        0.9733 72.17%, 0.9864 75.67%,
+        0.9982 83.73%, 1 100%
+    );
+}
+
 .navigation {
-    width: 50%;
+    display: inline-block;
     position: -webkit-sticky;
     position: sticky;
-    top: var(--sm-spacer);
-    padding: clamp(var(--base-spacer) / 2, 1vw, var(--base-spacer));
-    margin-inline: auto;
+    top: 1.5rem;
+    padding: clamp(0.5rem, 1vw, 0.75rem);
     border-radius: var(--xl-spacer);
     background-color: var(--night);
 }
 
 .navigation__content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: var(--md-spacer);
-    margin: 0 var(--base-spacer);
+    /* gap: var(--md-spacer); */
+    gap: calc(var(--md-spacer) * var(--expanded));
+    margin: 0 clamp(var(--base-spacer) / 2, 1vw, var(--base-spacer));
+    transition: gap 250ms var(--elastic);
 }
 
 .navigation__link {
@@ -25,7 +51,7 @@
 }
 
 .navigation__hero {
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1.25rem, 2vw, 2rem);
     text-align: center;
 }
 
@@ -41,22 +67,89 @@
 }
 
 .navigation__language {
-    font-size: 1rem;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
     color: var(--white);
     border: none;
     background: none;
 }
 
-@media (max-width: 1024px) {
+@supports(animation-timeline: scroll()) { 
+    :root {
+        timeline-scope: --home, --about-me, --project, --experiences, --contact;
+    }
+
+    #home { view-timeline-name: --home }
+
     .navigation {
-        width: 70%;
+        animation: expand both steps(1, end);
+        animation-timeline: --home;
+        animation-range: exit;
+    }
+
+    #about-me { view-timeline: --about-me }
+    #project { view-timeline: --project }
+    #experiences { view-timeline: --experiences }
+    #contact { view-timeline: --contact }
+
+    @keyframes expand {
+        to { --expanded: 1; }
+    }
+
+    /* header {
+		animation: expand both steps(1, end);
+		animation-timeline: --home;
+		animation-range: exit;
+	} */
+
+    .navigation__section a {
+        color: var(--active);
+        transition: color 250ms ease-out;
+    }
+    
+    .navigation__section:is(:hover, :focus-visible) a { 
+        color: var(--white);
+    }
+
+    .navigation__section {
+        animation: activate both steps(1);
+    }
+
+    .navigation__section:has([href="#about-me"]) {
+		animation-timeline: --about-me;
+		animation-range: entry -100% exit 100%;
+	}
+
+	.navigation__section:has([href="#project"]) {
+		animation-timeline: --project;
+	}
+
+	.navigation__section:has([href="#experiences"]) {
+		animation-timeline: --experiences;
+	}
+
+	.navigation__section:has([href="#contact"]) {
+		animation-timeline: --contact;
+	}
+
+    @keyframes activate {
+		to { --active: var(--white); }
+	}
+
+    @keyframes expand { 
+        to { --expanded: 1; } 
     }
 }
 
+@media (max-width: 1366px) { 
+    /* .navigation {
+        width: 50%;
+    } */
+}
+
 @media screen and (max-width: 768px) {
-    .navigation {
+    /* .navigation {
         width: 80%;
-    }
+    } */
 
     .navigation__sections {
         display: none;
