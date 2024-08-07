@@ -1,13 +1,19 @@
 @property --expanded {
     syntax: '<number>';
 	inherits: true;
-	initial-value: 0;
+	initial-value: 16;
 }
 
-@property --active {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: #7d7d7d;
+@property --displayed {
+    syntax: '<custom-ident>';
+    inherits: true;
+    initial-value: none;
+}
+
+@property --hidden {
+    syntax: '<custom-ident>';
+    inherits: true;
+    initial-value: block;
 }
 
 :root {
@@ -34,11 +40,15 @@
     background-color: var(--night);
 }
 
+.navigation__visit {
+    color: var(--white);
+}
+
 .navigation__content {
     display: flex;
     align-items: center;
     /* gap: var(--md-spacer); */
-    gap: calc(var(--md-spacer) * var(--expanded));
+    gap: calc(1px * var(--expanded));
     margin: 0 clamp(var(--base-spacer) / 2, 1vw, var(--base-spacer));
     transition: gap 250ms var(--elastic);
 }
@@ -55,8 +65,12 @@
     text-align: center;
 }
 
+.navigation__visit {
+    display: var(--hidden);
+}
+
 .navigation__sections {
-    display: flex;
+    display: var(--displayed);
     gap: var(--base-spacer);
     list-style: none;
 }
@@ -91,16 +105,6 @@
     #experiences { view-timeline: --experiences }
     #contact { view-timeline: --contact }
 
-    @keyframes expand {
-        to { --expanded: 1; }
-    }
-
-    /* header {
-		animation: expand both steps(1, end);
-		animation-timeline: --home;
-		animation-range: exit;
-	} */
-
     .navigation__section a {
         color: var(--active);
         transition: color 250ms ease-out;
@@ -110,33 +114,46 @@
         color: var(--white);
     }
 
-    .navigation__section {
+    .navigation__section a {
         animation: activate both steps(1);
+        transition: color 250ms ease-out;
     }
 
-    .navigation__section:has([href="#about-me"]) {
+    .navigation__section:has([href="#about-me"]) a {
 		animation-timeline: --about-me;
-		animation-range: entry -100% exit 100%;
+		animation-range: entry -100%;
 	}
 
-	.navigation__section:has([href="#project"]) {
+	.navigation__section:has([href="#project"]) a {
 		animation-timeline: --project;
+        animation-range: entry -100%;
 	}
 
-	.navigation__section:has([href="#experiences"]) {
+	.navigation__section:has([href="#experiences"]) a {
 		animation-timeline: --experiences;
+        animation-range: entry -100%;
 	}
 
-	.navigation__section:has([href="#contact"]) {
+	.navigation__section:has([href="#contact"]) a {
 		animation-timeline: --contact;
+        animation-range: entry -100%;
 	}
 
     @keyframes activate {
-		to { --active: var(--white); }
+        from {
+            color: var(--gray);
+        }
+		to {
+            color: var(--white); 
+        }
 	}
 
     @keyframes expand { 
-        to { --expanded: 1; } 
+        to { 
+            --expanded: 56;
+            --displayed: flex;
+            --hidden: none;
+        } 
     }
 }
 

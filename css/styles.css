@@ -15,7 +15,7 @@ img:not([alt]) {
 
 html {
     scroll-behavior: smooth;
-	/* scroll-padding-top: calc(var(--lg-spacer) + 0.5rem); */
+	scroll-padding-top: calc(var(--lg-spacer) + 0.5rem);
     overflow-x: hidden;
 }
 
