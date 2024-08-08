@@ -1,7 +1,7 @@
 @property --expanded {
     syntax: '<number>';
-	inherits: true;
-	initial-value: 16;
+    inherits: true;
+    initial-value: 24;
 }
 
 @property --displayed {
@@ -13,21 +13,25 @@
 @property --hidden {
     syntax: '<custom-ident>';
     inherits: true;
-    initial-value: block;
+    initial-value: flex;
+}
+
+@property --active {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #7d7d7d;
 }
 
 :root {
-    --elastic: linear(
-        0 0%, 0.0012 14.95%, 0.0089 22.36%,
-        0.0297 28.43%, 0.0668 33.43%,
-        0.0979 36.08%, 0.1363 38.55%,
-        0.2373 43.07%, 0.3675 47.01%,
-        0.5984 52.15%, 0.7121 55.23%,
-        0.8192 59.21%, 0.898 63.62%,
-        0.9297 66.23%, 0.9546 69.06%,
-        0.9733 72.17%, 0.9864 75.67%,
-        0.9982 83.73%, 1 100%
-    );
+    --elastic: linear(0 0%, 0.0012 14.95%, 0.0089 22.36%,
+            0.0297 28.43%, 0.0668 33.43%,
+            0.0979 36.08%, 0.1363 38.55%,
+            0.2373 43.07%, 0.3675 47.01%,
+            0.5984 52.15%, 0.7121 55.23%,
+            0.8192 59.21%, 0.898 63.62%,
+            0.9297 66.23%, 0.9546 69.06%,
+            0.9733 72.17%, 0.9864 75.67%,
+            0.9982 83.73%, 1 100%);
 }
 
 .navigation {
@@ -41,16 +45,28 @@
 }
 
 .navigation__visit {
+    height: auto;
+    display: var(--hidden);
+    align-items: center;
+    gap: var(--base-spacer);
     color: var(--white);
+}
+
+.navigation__visit-arrow {
+    font-size: clamp(0.75rem, 1vw, 1.25rem);
+    transition: rotate 250ms linear;
+}
+
+.navigation__content:is(:hover) .navigation__visit-arrow {
+    rotate: 450deg;
 }
 
 .navigation__content {
     display: flex;
     align-items: center;
-    /* gap: var(--md-spacer); */
     gap: calc(1px * var(--expanded));
     margin: 0 clamp(var(--base-spacer) / 2, 1vw, var(--base-spacer));
-    transition: gap 250ms var(--elastic);
+    transition: all 250ms var(--elastic);
 }
 
 .navigation__link {
@@ -65,14 +81,15 @@
     text-align: center;
 }
 
-.navigation__visit {
-    display: var(--hidden);
-}
-
 .navigation__sections {
     display: var(--displayed);
     gap: var(--base-spacer);
     list-style: none;
+}
+
+.navigation__section .navigation__link {
+    color: var(--active);
+    transition: color 250ms ease-out;
 }
 
 .navigation__options {
@@ -81,18 +98,21 @@
 }
 
 .navigation__language {
+    display: var(--displayed);
     font-size: clamp(1.25rem, 2vw, 1.5rem);
     color: var(--white);
     border: none;
     background: none;
 }
 
-@supports(animation-timeline: scroll()) { 
+@supports(animation-timeline: scroll()) {
     :root {
         timeline-scope: --home, --about-me, --project, --experiences, --contact;
     }
 
-    #home { view-timeline-name: --home }
+    #home {
+        view-timeline-name: --home
+    }
 
     .navigation {
         animation: expand both steps(1, end);
@@ -100,64 +120,68 @@
         animation-range: exit;
     }
 
-    #about-me { view-timeline: --about-me }
-    #project { view-timeline: --project }
-    #experiences { view-timeline: --experiences }
-    #contact { view-timeline: --contact }
+    #about-me {
+        view-timeline: --about-me
+    }
 
-    .navigation__section a {
+    #project {
+        view-timeline: --project
+    }
+
+    #experiences {
+        view-timeline: --experiences
+    }
+
+    #contact {
+        view-timeline: --contact
+    }
+
+    .navigation__section .navigation__link {
         color: var(--active);
         transition: color 250ms ease-out;
     }
-    
-    .navigation__section:is(:hover, :focus-visible) a { 
-        color: var(--white);
-    }
 
-    .navigation__section a {
+    .navigation__section .navigation__link {
         animation: activate both steps(1);
         transition: color 250ms ease-out;
     }
 
-    .navigation__section:has([href="#about-me"]) a {
-		animation-timeline: --about-me;
-		animation-range: entry -100%;
-	}
-
-	.navigation__section:has([href="#project"]) a {
-		animation-timeline: --project;
+    .navigation__section:has([href="#about-me"]) .navigation__link {
+        animation-timeline: --about-me;
         animation-range: entry -100%;
-	}
+    }
 
-	.navigation__section:has([href="#experiences"]) a {
-		animation-timeline: --experiences;
+    .navigation__section:has([href="#project"]) .navigation__link {
+        animation-timeline: --project;
         animation-range: entry -100%;
-	}
+    }
 
-	.navigation__section:has([href="#contact"]) a {
-		animation-timeline: --contact;
+    .navigation__section:has([href="#experiences"]) .navigation__link {
+        animation-timeline: --experiences;
         animation-range: entry -100%;
-	}
+    }
+
+    .navigation__section:has([href="#contact"]) .navigation__link {
+        animation-timeline: --contact;
+        animation-range: entry -100%;
+    }
 
     @keyframes activate {
-        from {
-            color: var(--gray);
+        to {
+            --active: #ffffff;
         }
-		to {
-            color: var(--white); 
-        }
-	}
+    }
 
-    @keyframes expand { 
-        to { 
-            --expanded: 56;
+    @keyframes expand {
+        to {
+            --expanded: 64;
             --displayed: flex;
             --hidden: none;
-        } 
+        }
     }
 }
 
-@media (max-width: 1366px) { 
+@media (max-width: 1366px) {
     /* .navigation {
         width: 50%;
     } */
