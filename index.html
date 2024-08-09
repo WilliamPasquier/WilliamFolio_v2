@@ -11,6 +11,7 @@
         <script type="text/javascript" src="js/script.js"></script>
         <script type="text/javascript" src="js/utils.js"></script>
         <script type="text/javascript" src="js/components/finder.js"></script>
+        <script type="text/javascript" src="js/components/navbar.js"></script>
 
         <!-- Import CSS files -->
         <link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -77,8 +78,8 @@
                 </div>
             </section>
 
-            <!-- Navigation bar -->
-            <header class="navigation shadow--sm">
+            <!-- Navigation bar - desktop -->
+            <header id="navigation-desktop" class="navigation navigation--desktop shadow--sm">
                 <nav class="navigation__content">
                     <a href="#" class="navigation__hero navigation__link wf-icon-william_logo"></a>
                     <ul class="navigation__sections">
@@ -95,12 +96,16 @@
                             <a href="#contact" class=".navigation__contact navigation__link">Contact me</a>
                         </li>
                     </ul>
-                    <button class="navigation__language wf-icon-globe"></button>
+                    <button id="language-toggle" class="navigation__language navigation__language-open wf-icon-globe"></button>
                     <a href="#about-me" class="navigation__link navigation__visit">
                         <span class="navigation__visit-text">Let's visit</span>
                         <i class="navigation__visit-arrow wf-icon-right_arrow"></i>
                     </a>
                 </nav>
+                <div class="navigation__language-selections" selector-hidden="true">
+                    <button id="language-en" class="navigation__language-selection" language-active="true" onclick="changeLanguage('en', this)">EN</button>
+                    <button id="language-fr" class="navigation__language-selection" language-active="false" onclick="changeLanguage('fr', this)">FR</button>
+                </div>
             </header>
 
             <section id="about-me" style="height: 100dvh; background-color: white; margin: 2rem 0;">
@@ -115,11 +120,11 @@
                 <h1>my experiences</h1>
             </section>
             
-            <section id="contact" style="height: 10dvh; margin: 2rem 0;">
+            <section id="contact" style="height: 15dvh; margin: 2rem 0;">
                 <h1>Contact me</h1>
             </section>
 
-            <footer style="height: 5dvh; background-color: white;">
+            <footer style="height: 10dvh; background-color: white;">
                 <h1>Footer</h1>
             </footer>
         </main>
