@@ -12,3 +12,5 @@ const readJSON = (JSONUrl, callback) => {
 
     xhr.send();
 };
+
+const isMobile = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);

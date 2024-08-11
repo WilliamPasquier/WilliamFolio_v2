@@ -25,6 +25,65 @@
     </head>
     <body>
         <main>
+            <!-- Navigation bar - tablet -->
+            <header id="navigation-tablet" class="navigation navigation--tablet shadow">
+                <nav class="navigation__content navigation__content--tablet">
+                    <a href="#" class="navigation__hero--tablet navigation__link--tablet wf-icon-william_logo"></a>
+                    <ul class="navigation__sections navigation__sections--tablet">
+                        <li class="navigation__section navigation__section--tablet">
+                            <a href="#about-me" class="navigation__link--tablet">About me</a>
+                        </li>
+                        <li class="navigation__section navigation__section--tablet">
+                            <a href="#projects" class="navigation__link--tablet">My projects</a>
+                        </li>
+                        <li class="navigation__section navigation__section--tablet">
+                            <a href="#experiences" class="navigation__link--tablet">Experiences</a>
+                        </li>
+                        <li class="navigation__section navigation__section--tablet">
+                            <a href="#contact" class="navigation__link--tablet">Contact me</a>
+                        </li>
+                    </ul>
+                    <button id="language-toggle-tablet" class="navigation__language--tablet navigation__language-open wf-icon-globe"></button>
+                </nav>
+                <div class="navigation__language-selections navigation__language-selections--tablet" selector-hidden="true">
+                    <button id="language-en" class="navigation__language-selection" language-active="true">EN</button>
+                    <button id="language-fr" class="navigation__language-selection" language-active="false">FR</button>
+                </div>
+            </header>
+
+            <!-- Navigation bar - mobile -->
+            <header id="navigation-mobile" class="navigation navigation--mobile shadow">
+                <nav class="navigation__content--mobile">
+                    <div class="navigation__controllers">
+                        <a href="#" class="navigation__hero--tablet navigation__link--tablet wf-icon-william_logo"></a>
+                        <button id="mobile-burger" class="navigation__menu wf-icon-burger" data-extended="false"></button>
+                    </div>
+                    <div class="navigation__container">
+                        <ul class="navigation__sections navigation__sections--mobile">
+                            <li class="navigation__section navigation__section--mobile">
+                                <a href="#about-me" class="navigation__link--mobile">About me</a>
+                            </li>
+                            <li class="navigation__section navigation__section--mobile">
+                                <a href="#projects" class="navigation__link--mobile">My projects</a>
+                            </li>
+                            <li class="navigation__section navigation__section--mobile">
+                                <a href="#experiences" class="navigation__link--mobile">Experiences</a>
+                            </li>
+                            <li class="navigation__section navigation__section--mobile">
+                                <a href="#contact" class="navigation__link--mobile">Contact me</a>
+                            </li>
+                        </ul>
+                        <div class="navigation__container-footer">
+                            <button id="language-toggle-mobile" class="navigation__language navigation__language--mobile navigation__language-open wf-icon-globe"></button>
+                            <div class="navigation__language-selections navigation__language-selections--mobile" selector-hidden="true">
+                                <button id="language-en" class="navigation__language-selection" language-active="true">EN</button>
+                                <button id="language-fr" class="navigation__language-selection" language-active="false">FR</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
             <!-- Hero section -->
             <section id="home" class="hero">
                 <center class="hero__header">
@@ -83,16 +142,16 @@
                 <nav class="navigation__content">
                     <a href="#" class="navigation__hero navigation__link wf-icon-william_logo"></a>
                     <ul class="navigation__sections">
-                        <li class="navigation__section">
+                        <li class="navigation__section navigation__section--desktop">
                             <a href="#about-me" class="navigation__link">About me</a>
                         </li>
-                        <li class="navigation__section">
-                            <a href="#project" class="navigation__link">My projects</a>
+                        <li class="navigation__section navigation__section--desktop">
+                            <a href="#projects" class="navigation__link">My projects</a>
                         </li>
-                        <li class="navigation__section">
+                        <li class="navigation__section navigation__section--desktop">
                             <a href="#experiences" class="navigation__link">Experiences</a>
                         </li>
-                        <li class="navigation__section">
+                        <li class="navigation__section navigation__section--desktop">
                             <a href="#contact" class=".navigation__contact navigation__link">Contact me</a>
                         </li>
                     </ul>
@@ -103,8 +162,8 @@
                     </a>
                 </nav>
                 <div class="navigation__language-selections" selector-hidden="true">
-                    <button id="language-en" class="navigation__language-selection" language-active="true" onclick="changeLanguage('en', this)">EN</button>
-                    <button id="language-fr" class="navigation__language-selection" language-active="false" onclick="changeLanguage('fr', this)">FR</button>
+                    <button id="language-en" class="navigation__language-selection navigation__language-selection--desktop" language-active="true">EN</button>
+                    <button id="language-fr" class="navigation__language-selection navigation__language-selection--desktop" language-active="false">FR</button>
                 </div>
             </header>
 
@@ -112,7 +171,7 @@
                 <h1>About me</h1>
             </section>
             
-            <section id="project" style="height: 100dvh; margin: 2rem 0;">
+            <section id="projects" style="height: 100dvh; margin: 2rem 0;">
                 <h1>My project</h1>
             </section>
             

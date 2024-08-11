@@ -47,7 +47,6 @@ body::before {
 }
 
 main {
-	width: 100dvw;
 	display: grid;
 	place-items: center;
 }

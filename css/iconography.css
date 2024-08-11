@@ -23,6 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.wf-icon-burger:before {
+  content: "\e912";
+}
 .wf-icon-cross:before {
   content: "\e911";
 }
