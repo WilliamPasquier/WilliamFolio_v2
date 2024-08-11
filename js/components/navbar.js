@@ -5,8 +5,8 @@
  */
 const navbarEvents = () => {
     const desktopNavbar = document.querySelector("#navigation-desktop");
-    const tabletNavbar = document.querySelector('#navigation-tablet');
-    const mobileNavbar = document.querySelector('#navigation-mobile');
+    const tabletNavbar = document.querySelector("#navigation-tablet");
+    const mobileNavbar = document.querySelector("#navigation-mobile");
 
     if (isMobile()) {
         console.log("mobile or tablet");
@@ -15,7 +15,9 @@ const navbarEvents = () => {
             console.log("Its mobile size");
             if (tabletNavbar) tabletNavbar.remove();
             if (desktopNavbar) desktopNavbar.remove();
-            const languageToggleMobile = mobileNavbar.querySelector("#language-toggle-mobile");
+            const languageToggleMobile = mobileNavbar.querySelector(
+                "#language-toggle-mobile"
+            );
 
             openLanguageSelector(mobileNavbar, languageToggleMobile);
             toggleBurgerMenu(mobileNavbar);
@@ -23,7 +25,9 @@ const navbarEvents = () => {
             console.log("Its tablet size");
             if (mobileNavbar) mobileNavbar.remove();
             if (desktopNavbar) desktopNavbar.remove();
-            const languageToggleTablet = tabletNavbar.querySelector("#language-toggle-tablet");
+            const languageToggleTablet = tabletNavbar.querySelector(
+                "#language-toggle-tablet"
+            );
 
             openLanguageSelector(tabletNavbar, languageToggleTablet);
         }
@@ -36,7 +40,7 @@ const navbarEvents = () => {
         openLanguageSelector(desktopNavbar, languageToggle);
     }
 
-    detectButtonClick();
+    detectLanguageClick();
 };
 
 const checkIfMobile = (desktopNavbar, tabletNavbar) => {
@@ -45,8 +49,13 @@ const checkIfMobile = (desktopNavbar, tabletNavbar) => {
     } else {
         tabletNavbar.remove();
     }
-}
+};
 
+/**
+ * Toggle language sub menu.
+ * @param {*} navbar - Navbar element.
+ * @param {*} languageToggle - Language button toggle element.
+ */
 const openLanguageSelector = (navbar, languageToggle) => {
     const languageSelections = navbar.querySelector(
         ".navigation__language-selections"
@@ -87,7 +96,10 @@ const openLanguageSelector = (navbar, languageToggle) => {
     });
 };
 
-const detectButtonClick = () => {
+/**
+ * Detect language click.
+ */
+const detectLanguageClick = () => {
     document
         .querySelectorAll(".navigation__language-selection")
         .forEach((button) => {
@@ -110,43 +122,53 @@ const detectButtonClick = () => {
         });
 };
 
+/**
+ * TODO : Change language
+ * @param {*} language - Language value.
+ */
 const changeLanguage = (language) => {
     console.log("Current language :", language);
 };
 
+/**
+ * Toggle burger menu.
+ * @param {*} navbar - Navbar element.
+ */
 const toggleBurgerMenu = (navbar) => {
-    const burgerButton = navbar.querySelector('#mobile-burger');
-    const navContainer = navbar.querySelector('.navigation__container');
+    const burgerButton = navbar.querySelector("#mobile-burger");
+    const navContainer = navbar.querySelector(".navigation__container");
 
-    burgerButton.addEventListener('click', () => {
+    burgerButton.addEventListener("click", () => {
         const isExtended = burgerButton.getAttribute("data-extended");
-        const sections = navbar.querySelectorAll('.navigation__section--mobile');
-        const languageToggle = navbar.querySelector('#language-toggle-mobile');
+        const sections = navbar.querySelectorAll(
+            ".navigation__section--mobile"
+        );
+        const languageToggle = navbar.querySelector("#language-toggle-mobile");
 
         if (isExtended === "false") {
-            burgerButton.classList.remove('wf-icon-burger');
-            burgerButton.classList.add('wf-icon-cross');
+            burgerButton.classList.remove("wf-icon-burger");
+            burgerButton.classList.add("wf-icon-cross");
             burgerButton.setAttribute("data-extended", true);
             navContainer.style.display = "flex";
 
             setTimeout(() => {
                 sections.forEach((section) => {
-                    section.classList.add('show');
+                    section.classList.add("show");
                 });
-                languageToggle.classList.add('show');
-            }, 100)
+                languageToggle.classList.add("show");
+            }, 100);
         } else {
             setTimeout(() => {
                 sections.forEach((section) => {
-                    section.classList.remove('show');
+                    section.classList.remove("show");
                 });
-                languageToggle.classList.remove('show');
-            }, 100)
+                languageToggle.classList.remove("show");
+            }, 100);
 
-            burgerButton.classList.remove('wf-icon-cross');
-            burgerButton.classList.add('wf-icon-burger');
+            burgerButton.classList.remove("wf-icon-cross");
+            burgerButton.classList.add("wf-icon-burger");
             burgerButton.setAttribute("data-extended", false);
             navContainer.style.display = "none";
         }
-    })
-}
+    });
+};

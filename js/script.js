@@ -4,7 +4,3 @@ window.onload = () => {
     finderEvents();
     navbarEvents();
 };
-
-window.onresize = () => {
-
-}
