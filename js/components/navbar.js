@@ -43,14 +43,6 @@ const navbarEvents = () => {
     detectLanguageClick();
 };
 
-const checkIfMobile = (desktopNavbar, tabletNavbar) => {
-    if (isMobile()) {
-        desktopNavbar.remove();
-    } else {
-        tabletNavbar.remove();
-    }
-};
-
 /**
  * Toggle language sub menu.
  * @param {*} navbar - Navbar element.
