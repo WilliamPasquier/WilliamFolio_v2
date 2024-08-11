@@ -2,4 +2,5 @@
 
 window.onload = () => {
     finderEvents();
-}
+    navbarEvents();
+};

@@ -23,6 +23,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.wf-icon-burger:before {
+  content: "\e912";
+}
+.wf-icon-cross:before {
+  content: "\e911";
+}
+.wf-icon-left_arrow:before {
+  content: "\e910";
+}
+.wf-icon-down_arrow:before {
+  content: "\e90f";
+}
+.wf-icon-right_arrow:before {
+  content: "\e90e";
+}
+.wf-icon-up_arrow:before {
+  content: "\e90d";
+}
+.wf-icon-down_arrow:before {
+  content: "\e90d";
+}
+.wf-icon-globe:before {
+  content: "\e90c";
+}
 .wf-icon-ntxproject:before {
   content: "\e90b";
 }

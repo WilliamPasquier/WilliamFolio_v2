@@ -1,10 +1,9 @@
 .hero {
-    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: clamp(12px, 2vw, 32px);
-    margin: clamp(1rem, 5vw, var(--lg-spacer)) 0;
+    margin-bottom: clamp(0.5rem, 5vw, var(--sm-spacer));
 }
 
 .hero__intro {

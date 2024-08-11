@@ -76,7 +76,8 @@
     justify-content: center;
     align-items: center;
     gap: clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));
-    padding: min(calc(var(--base-spacer) / 2), 1vw) min(var(--base-spacer), 1vw);
+    padding: clamp(calc(var(--base-spacer) / 4), 1vw, calc(var(--base-spacer) / 2)) 
+    clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));
     border: unset;
     border-radius: 8px;
     color: var(--gray);
