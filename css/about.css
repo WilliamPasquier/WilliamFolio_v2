@@ -1,0 +1,34 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: clamp(0.5rem, 5vw, var(--sm-spacer)) 0;
+    background-color: var(--white);
+}
+
+.about__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--sm-spacer);
+}
+
+.about__content {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-spacer);
+    padding: 0 clamp(var(--base-spacer), 5vw, var(--lg-spacer));
+}
+
+.about__presentation {
+    font-size: 18px;
+    color: var(--davys-gray);
+}
+
+.about__link {
+    text-decoration: none;
+    color: var(--night);
+}
+
+.about__certifications-title {
+    font-size: 2rem;
+}
