@@ -30,27 +30,6 @@
     gap: clamp(2px, 1vw, 6px);
 }
 
-.finder__nav-btn {
-    width: clamp(8px, 1vw, 14px);
-    aspect-ratio: 1;
-    border-radius: 100%;
-}
-
-.finder__nav-close {
-    background-color: var(--bittersweet);
-    border: solid 1px var(--imperial-red);
-}
-
-.finder__nav-reduce {
-    background-color: var(--xanthous);
-    border: solid 1px var(--hunyadi-yellow);
-}
-
-.finder__nav-resize {
-    background-color: var(--dark-pastel-green);
-    border: solid 1px var(--dark-pastel-green-2);
-}
-
 .finder__nav-title {
     color: var(--gray);
     font-size: clamp(8px, 1vw, 12px);
@@ -58,7 +37,7 @@
     margin-bottom: 4px;
 }
 
-.finder__nav-projects {
+.finder__nav-items {
     display: flex;
     flex-direction: column;
     gap: calc(var(--base-spacer) / 2);
@@ -67,11 +46,11 @@
     position: relative;
 }
 
-.finder__nav-projects li {
+.finder__nav-items li {
     cursor: pointer;
 }
 
-.finder__nav-project {
+.finder__nav-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,23 +67,23 @@
     transition: all 250ms ease-out;
 }
 
-.finder__nav-project[data-active="true"] {
+.finder__nav-item[data-active="true"] {
     color: var(--davys-gray);
     background-color: var(--silver);
     pointer-events: none;
 }
 
-.finder__nav-project:hover {
+.finder__nav-item:hover {
     background-color: var(--silver-2);
 }
 
-.finder__nav-project-icon {
+.finder__nav-item-icon {
     width: 1,5rem;
     font-size: clamp(22px, 2vw, var(--subtitle-font));
     color: var(--gray);
 }
 
-.finder__nav-project-title {
+.finder__nav-item-title {
     white-space: nowrap;
 }
 

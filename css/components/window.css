@@ -1,0 +1,25 @@
+.window {
+    width: 30%;
+    border: solid 1px var(--platinum);
+    border-radius: var(--base-padding);
+}
+
+.window__header, .window__container {
+    padding-top: clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));
+    padding-bottom: clamp(calc(var(--base-spacer) / 2), 1vw, var(--base-spacer));
+    padding-right: clamp(10px, 1vw, calc(var(--base-spacer) + 0.5rem));
+    padding-left: clamp(10px, 1vw, calc(var(--base-spacer) + 0.5rem));
+}
+
+.window__header {
+    display: flex;
+    align-items: center;
+    gap: clamp(2px, 1vw, 6px);
+    border-radius: var(--base-padding) var(--base-padding) 0 0 ;
+    background: var(--gray-gradient);
+}
+
+.window__container {
+    border-radius: 0 0 var(--base-padding) var(--base-padding);
+    background-color: var(--white);
+}

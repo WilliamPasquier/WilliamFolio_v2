@@ -21,6 +21,7 @@
         <link rel="stylesheet" type="text/css" href="css/hero.css"/>
         <link rel="stylesheet" type="text/css" href="css/about.css"/>
         <link rel="stylesheet" type="text/css" href="css/components/finder.css"/>
+        <link rel="stylesheet" type="text/css" href="css/components/window.css"/>
         <link rel="stylesheet" type="text/css" href="css/components/hero-skeleton.css"/>
         <link rel="stylesheet" type="text/css" href="css/components/navigation.css"/>
     </head>
@@ -95,9 +96,9 @@
                     <div id="hero-finder" class="finder shadow">
                         <aside class="finder__nav">
                             <div class="finder__nav-header">
-                                <div class="finder__nav-btn finder__nav-close"></div>
-                                <div class="finder__nav-btn finder__nav-reduce"></div>
-                                <div class="finder__nav-btn finder__nav-resize"></div>
+                                <div class="nav-btn nav-btn--close"></div>
+                                <div class="nav-btn nav-btn--reduce"></div>
+                                <div class="nav-btn nav-btn--resize"></div>
                             </div>
                             <h3 class="finder__nav-title">Projects</h3>
                             <nav id="hero-nav" class="finder__nav-content">
@@ -169,26 +170,23 @@
             </header>
 
             <!-- About me section -->
-            <section id="about-me" class="about">
+            <section id="about-me" class="about" style="height: 100dvh;">
                 <h1 class="about__title bold">About me</h1>
-                <!-- <div class="about__content">
-                    <p class="about__presentation">
-                        I'm a 22-year-old Swiss application developer, freshly graduated in June 2024. I did my apprenticeship for 4 years in the insurance companie named Vaudoise Assurances SA. During this training, I was able to travel in different teams with various technologies and explore several facets of the profession. I was also able to work on projects that ended up in production. I was able to complete my training successfully, as I ended up with a merit award from the <a class="about__link bold" href="https://www.epfl.ch/fr/" target="_blank">Ecole Polytechnique Fédérale de Lausanne - EPFL</a>.
-                    </p>
-                    <p class="about__presentation">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloremque quia omnis ea explicabo, veniam reprehenderit? Necessitatibus quis aspernatur iure consectetur ipsum atque tempora. Aut commodi quasi earum at culpa! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quasi explicabo iure maiores deleniti excepturi enim aperiam eaque, dicta repellat vel eligendi neque veniam expedita facilis veritatis. Unde, ad beatae?
-                    </p>
-                    <p class="about__presentation">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloremque quia omnis ea explicabo, veniam reprehenderit? Necessitatibus quis aspernatur iure consectetur ipsum atque tempora. Aut commodi quasi earum at culpa! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quasi explicabo iure maiores deleniti excepturi enim aperiam eaque, dicta repellat vel eligendi neque veniam expedita facilis veritatis. Unde, ad beatae?
-                    </p>
-                </div> -->
                 <div class="about__certifications">
                     <h2 class="about__certifications-title bold">My certifications</h2>
                     <div class="about__certifications-content">
-                        <div class="window shadow--sm about__certification"></div>
-                        <div class="window shadow--sm about__certification"></div>
-                        <div class="window shadow--sm about__certification"></div>
-                        <div class="window shadow--sm about__certification"></div>
+                        <div class="window shadow--sm about__certification">
+                            <div class="window__header">
+                                <div class="nav-btn nav-btn--close"></div>
+                                <div class="nav-btn nav-btn--reduce"></div>
+                                <div class="nav-btn nav-btn--resize"></div>
+                            </div>
+                            <div class="window__container">
+                                <div class="about__certification-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ratione ipsam quia illo molestiae minima blanditiis cumque, excepturi, numquam atque odit ipsa velit quisquam, quos rerum. Sapiente distinctio porro dolor!
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- <div class="about__content">
@@ -199,8 +197,83 @@
                     </div>
                     <i class="about__logo wf-icon-william_logo"></i>
                 </div> -->
-                <h2 class="about__skill">My skills</h2>
-                
+
+                <h2 class="about__skill">All the skills i learned</h2>
+                <div id="project-hero" class="hero__container">
+                    <div id="hero-finder" class="finder shadow">
+                        <aside class="finder__nav">
+                            <div class="finder__nav-header">
+                                <div class="nav-btn nav-btn--close"></div>
+                                <div class="nav-btn nav-btn--reduce"></div>
+                                <div class="nav-btn nav-btn--resize"></div>
+                            </div>
+                            <h3 class="finder__nav-title">Projects</h3>
+                            <nav id="hero-nav" class="finder__nav-content">
+                                <!-- <ol class="skeleton__nav-projects">
+                                    <li class="skeleton__nav-project skeleton__animation skeleton__animation--darker"></li>
+                                    <li class="skeleton__nav-project skeleton__animation skeleton__animation--darker"></li>
+                                    <li class="skeleton__nav-project skeleton__animation skeleton__animation--darker"></li>
+                                    <li class="skeleton__nav-project skeleton__animation skeleton__animation--darker"></li>
+                                    <li class="skeleton__nav-project skeleton__animation skeleton__animation--darker"></li>
+                                </ol> -->
+                                <!-- Navigation buttons -->
+                                <ol class="finder__nav-items finder__nav-items--skill">
+                                    <li>
+                                        <button class="finder__nav-item finder__nav-item--skill" data-active="true">
+                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-williamfolio_v2"></i>
+                                            <span class="finder__nav-item-title finder__nav-item-title--skill">Programming language</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="finder__nav-item finder__nav-item--skill" data-active="false">
+                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-williamfolio"></i>
+                                            <span class="finder__nav-item-title finder__nav-item-title--skill">Framework</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="finder__nav-item finder__nav-item--skill" data-active="false">
+                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-easyleague"></i>
+                                            <span class="finder__nav-item-title finder__nav-item-title--skill">Database</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="finder__nav-item finder__nav-item--skill" data-active="false">
+                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-mercure"></i>
+                                            <span class="finder__nav-item-title finder__nav-item-title--skill">Software</span>
+                                        </button>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </aside>
+                        <div class="finder__container">
+                            <div class="finder__container-header">
+                                <div class="finder__header-info">
+                                    <div class="finder__header-btns">
+                                        <i class="finder__select-btn wf-icon-previous_arrow"></i>
+                                        <i class="finder__select-btn wf-icon-next_arrow"></i>
+                                    </div>
+                                    <h2 class="finder__header-title">My skills</h2>
+                                </div>
+                                <div class="finder__content-btns">
+                                    <i class="finder__content-btn wf-icon-window_layout"></i>
+                                    <i class="finder__content-btn wf-icon-double_arrow"></i>
+                                    <i class="finder__content-btn wf-icon-magnifying_glass"></i>
+                                </div>
+                            </div>
+                            <div class="finder__container-content">
+                                <!-- <div class="skeleton__thumbnail skeleton__animation"></div> -->
+                                <!-- Images container -->
+                            </div>
+                            <div class="finder__container-footer">
+                                <!-- Footer -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" style="height: 100dvh;">
+                <h1>My projects</h1>
             </section>
         </main>
     </body>

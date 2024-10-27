@@ -29,6 +29,16 @@
     color: var(--night);
 }
 
+.about__certifications {
+    padding-bottom: var(--md-spacer);
+}
+
 .about__certifications-title {
     font-size: 2rem;
+    padding-bottom: var(--sm-spacer);
+}
+
+.about__skill {
+    font-size: 2.5rem;
+    padding-bottom: var(--sm-spacer);
 }

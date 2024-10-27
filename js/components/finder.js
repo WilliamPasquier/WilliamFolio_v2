@@ -40,11 +40,11 @@ const createHeroFinder = (data) => {
     // Construct finder navigation
     thumbnailProjects.forEach((thumbnail, i) => {
         thumbnailNavButtons += `<li>
-        <button class="finder__nav-project" data-active="${
+        <button class="finder__nav-item finder__nav-item--project" data-active="${
             i === 0 ? "true" : "false"
         }" onclick="getThumbnails(${i})">
-          <i class="finder__nav-project-icon wf-icon-${thumbnail.icon}"></i>
-          <span class="finder__nav-project-title">${thumbnail.title}</span>
+          <i class="finder__nav-item-icon finder__nav-item-icon--project wf-icon-${thumbnail.icon}"></i>
+          <span class="finder__nav-item-title finder__nav-item-title--project">${thumbnail.title}</span>
         </button>
       </li>`;
 
@@ -64,14 +64,14 @@ const createHeroFinder = (data) => {
     nav.innerHTML = "";
     nav.insertAdjacentHTML(
         "beforeend",
-        `<ol class="finder__nav-projects">${thumbnailNavButtons}</ol>`
+        `<ol class="finder__nav-items finder__nav-items--projects">${thumbnailNavButtons}</ol>`
     );
     content.innerHTML = "";
     content.insertAdjacentHTML("beforeend", images);
     footer.innerHTML = "";
     footer.insertAdjacentHTML("beforeend", numbers);
 
-    navItems = document.querySelectorAll(".finder__nav-project");
+    navItems = document.querySelectorAll(".finder__nav-item--project");
     thumbnailImages = document.querySelectorAll(".project-thumbnail");
 
     getThumbnails(0);
@@ -119,7 +119,7 @@ const navSelection = () => {
         navItem.addEventListener("click", () => {
             const newActive = navItem.getAttribute("data-active");
             const currentActive = document.querySelector(
-                '.finder__nav-project[data-active="true"]'
+                '.finder__nav-item--project[data-active="true"]'
             );
 
             if (newActive == "false") {

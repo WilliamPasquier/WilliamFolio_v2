@@ -82,3 +82,24 @@ section {
 		15px 15px 30px rgba(0, 0, 0, 0.1)
 	;
 }
+
+.nav-btn {
+    width: clamp(8px, 1vw, 14px);
+    aspect-ratio: 1;
+    border-radius: 100%;
+}
+
+.nav-btn--close {
+    background-color: var(--bittersweet);
+    border: solid 1px var(--imperial-red);
+}
+
+.nav-btn--reduce {
+    background-color: var(--xanthous);
+    border: solid 1px var(--hunyadi-yellow);
+}
+
+.nav-btn--resize {
+    background-color: var(--dark-pastel-green);
+    border: solid 1px var(--dark-pastel-green-2);
+}
