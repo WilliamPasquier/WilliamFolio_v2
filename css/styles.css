@@ -28,14 +28,14 @@ body::before {
 	background: 
 		linear-gradient(
 			90deg,
-			var(--white) 1px,
-			transparent 1px var(--size)
+			var(--white) 2px,
+			transparent 2px var(--size)
 		)
 		0 -5vmin / var(--size) var(--size),
 
 		linear-gradient(
-			var(--white) 1px, 
-			transparent 1px var(--size)
+			var(--white) 2px, 
+			transparent 2px var(--size)
 		) 
 		0 -5vmin / var(--size) var(--size),
 

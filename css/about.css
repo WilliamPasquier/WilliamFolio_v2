@@ -2,12 +2,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: clamp(0.5rem, 5vw, var(--md-spacer));
     margin: clamp(0.5rem, 5vw, var(--sm-spacer)) 0;
     background-color: var(--white);
 }
 
 .about__title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    margin-bottom: var(--sm-spacer);
+}
+
+.about__description {
+    display: flex;
+    gap: var(--md-spacer);
+    padding: 0 var(--xl-spacer);
+    margin-bottom: var(--md-spacer);
+}
+
+.about__description-logo {
+    max-width: 300px;
+    aspect-ratio: 1;
+}
+
+.about__description-paragraph {
+    font-size: 18px;
+    text-justify: distribute;
     margin-bottom: var(--sm-spacer);
 }
 
@@ -41,4 +60,18 @@
 .about__skill {
     font-size: 2.5rem;
     padding-bottom: var(--sm-spacer);
+}
+
+@media screen and (max-width: 768px) {
+    .about__description {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: var(--base-spacer);
+    }
+
+    .about__description-logo {
+        max-width: 200px;
+        aspect-ratio: 1;
+    }
 }

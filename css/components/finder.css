@@ -129,6 +129,8 @@
 
 
 .finder__container-footer {
+    display: grid;
+    place-items: center;
     margin-top: clamp(6px, 1vw, 12px);
 }
 
@@ -152,7 +154,11 @@
 }
 
 @media screen and (max-width: 768px) {
-    .finder__nav-project-title {
+    .finder--skill {
+        width: 100%;
+    }
+
+    .finder__nav-item-title {
         display: none;
     }
 }

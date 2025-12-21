@@ -52,8 +52,12 @@
     position: sticky;
     top: 1.5rem;
     padding: clamp(0.5rem, 1vw, 0.75rem);
-    border-radius: var(--sm-spacer);
+    border-radius: 1rem;
     background-color: var(--night);
+}
+
+.navigation--desktop {
+    z-index: 9000;
 }
 
 .navigation>* {
@@ -78,6 +82,7 @@
 
 .navigation__content:is(:hover) .navigation__visit-arrow {
     rotate: 450deg;
+    transition-delay: 150ms;
 }
 
 .navigation__visit {
@@ -95,7 +100,7 @@
 
 .navigation__visit-arrow {
     font-size: clamp(0.75rem, 1vw, 1.25rem);
-    transition: rotate 250ms linear;
+    transition: rotate 250ms ease-out;
 }
 
 .navigation__link {
@@ -251,6 +256,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    padding: 0 var(--sm-spacer);
     gap: var(--base-spacer);
 }
 

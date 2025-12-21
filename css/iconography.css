@@ -23,6 +23,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.wf-icon-application_icon:before {
+  content: "\e916";
+}
+.wf-icon-database_icon:before {
+  content: "\e915";
+}
+.wf-icon-framework_icon:before {
+  content: "\e914";
+}
+.wf-icon-code_icon:before {
+  content: "\e913";
+}
 .wf-icon-burger:before {
   content: "\e912";
 }
@@ -39,9 +51,6 @@
   content: "\e90e";
 }
 .wf-icon-up_arrow:before {
-  content: "\e90d";
-}
-.wf-icon-down_arrow:before {
   content: "\e90d";
 }
 .wf-icon-globe:before {

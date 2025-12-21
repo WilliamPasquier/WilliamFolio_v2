@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * All events
+ * All navigation bar related events
  */
 const navbarEvents = () => {
     const desktopNavbar = document.querySelector("#navigation-desktop");
@@ -45,7 +45,7 @@ const navbarEvents = () => {
 
 /**
  * Toggle language sub menu.
- * @param {*} navbar - Navbar element.
+ * @param {HTMLDivElement} navbar - Navbar element.
  * @param {*} languageToggle - Language button toggle element.
  */
 const openLanguageSelector = (navbar, languageToggle) => {

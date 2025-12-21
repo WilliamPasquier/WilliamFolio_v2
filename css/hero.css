@@ -1,12 +1,11 @@
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: clamp(12px, 2vw, 32px);
-    margin-bottom: clamp(0.5rem, 5vw, var(--sm-spacer));
+    margin-bottom: clamp(0.5rem, 5vw, var(--base-padding));
 }
 
 .hero__intro {
+    display: flex;
+    flex-direction: column;
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
 

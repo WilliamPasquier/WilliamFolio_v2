@@ -1,6 +1,7 @@
 "use strict";
 
 window.onload = () => {
-    finderEvents();
+    finderHeroEvents();
+    finderSkillsEvents();
     navbarEvents();
 };

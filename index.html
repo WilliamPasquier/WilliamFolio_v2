@@ -10,7 +10,8 @@
         <!-- Import JavaScript files / libraries -->
         <script type="text/javascript" src="js/script.js"></script>
         <script type="text/javascript" src="js/utils.js"></script>
-        <script type="text/javascript" src="js/components/finder.js"></script>
+        <script type="text/javascript" src="js/components/finder-hero.js"></script>
+        <script type="text/javascript" src="js/components/finder-skill.js"></script>
         <script type="text/javascript" src="js/components/navbar.js"></script>
 
         <!-- Import CSS files -->
@@ -20,8 +21,9 @@
         <link rel="stylesheet" type="text/css" href="css/fonts.css"/>
         <link rel="stylesheet" type="text/css" href="css/hero.css"/>
         <link rel="stylesheet" type="text/css" href="css/about.css"/>
-        <link rel="stylesheet" type="text/css" href="css/components/finder.css"/>
         <link rel="stylesheet" type="text/css" href="css/components/window.css"/>
+        <link rel="stylesheet" type="text/css" href="css/components/finder.css"/>
+        <link rel="stylesheet" type="text/css" href="css/components/finder-skill.css"/>
         <link rel="stylesheet" type="text/css" href="css/components/hero-skeleton.css"/>
         <link rel="stylesheet" type="text/css" href="css/components/navigation.css"/>
     </head>
@@ -89,8 +91,8 @@
             <!-- Hero section -->
             <section id="home" class="hero">
                 <center class="hero__header">
-                    <p class="hero__intro">Hi, I'm William Pasquier and I'm a</p>
-                    <h1 class="hero__title bold">Software Developer</h1>
+                    <h1 class="hero__intro">Hi, I'm William Pasquier and I'm a
+                    <span class="hero__title bold">Software Developer</span></h1>
                 </center>
                 <div id="project-hero" class="hero__container">
                     <div id="hero-finder" class="finder shadow">
@@ -170,9 +172,24 @@
             </header>
 
             <!-- About me section -->
-            <section id="about-me" class="about" style="height: 100dvh;">
+            <section id="about-me" class="about">
                 <h1 class="about__title bold">About me</h1>
-                <div class="about__certifications">
+    
+                <div class="about__description">
+                    <div class="about__description-icon">
+                        <img src="resources/images/logos/williamdev_logo.png" alt="William Pasquier Logo" class="about__description-logo">
+                    </div>
+                    <div class="about__description-texts">
+                        <p class="about__description-paragraph">
+                            I am 23 years old and I live in Switzerland. I completed a four-year apprenticeship in application development in June 2024, at Vaudoise Assurance SA, where I worked from March 2020 to July 2024. At the end of my training, I earned my Federal VET Diploma (CFC) with a final grade average of 
+                            <strong class="about__description-paragraph">5.5</strong> 
+                            and a score of 5.7 on my Individual Practical Project (TPI), which earned me the Best Apprentice Award from the Swiss Federal Institute of Technology in Lausanne (EPFL).
+                            </p>
+                        <p class="about__description-paragraph">During these four years, I gained solid technical experience both through practical coursework and hands-on work in the company. I had the opportunity to work with several teams, each focusing on different aspects of the business, allowing me to strengthen my skills—particularly in back-end development using technologies such as .NET and Entity Framework Core. I was also involved in automating the creation, printing, and mailing processes for client letters. For my final project, I worked on updating Angular components used for reporting claims related to home and liability insurance. My education also covered the fundamentals of computer science and object-oriented programming, which I applied in various individual and collaborative projects.</p>
+                        <p class="about__description-paragraph">I am currently pursuing a post-diploma vocational baccalaureate in technology, architecture, and life sciences, with the goal of joining EPFL and continuing my academic journey in a high-level environment.</p>
+                    </div>
+                </div>
+                <!-- <div class="about__certifications">
                     <h2 class="about__certifications-title bold">My certifications</h2>
                     <div class="about__certifications-content">
                         <div class="window shadow--sm about__certification">
@@ -188,7 +205,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- <div class="about__content">
                     <div>
                         <h2 class="about__name">William Pasquier</h2>
@@ -200,7 +217,7 @@
 
                 <h2 class="about__skill">All the skills i learned</h2>
                 <div id="project-hero" class="hero__container">
-                    <div id="hero-finder" class="finder shadow">
+                    <div id="hero-finder" class="finder finder--skill shadow">
                         <aside class="finder__nav">
                             <div class="finder__nav-header">
                                 <div class="nav-btn nav-btn--close"></div>
@@ -220,25 +237,25 @@
                                 <ol class="finder__nav-items finder__nav-items--skill">
                                     <li>
                                         <button class="finder__nav-item finder__nav-item--skill" data-active="true">
-                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-williamfolio_v2"></i>
+                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-code_icon"></i>
                                             <span class="finder__nav-item-title finder__nav-item-title--skill">Programming language</span>
                                         </button>
                                     </li>
                                     <li>
                                         <button class="finder__nav-item finder__nav-item--skill" data-active="false">
-                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-williamfolio"></i>
+                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-framework_icon"></i>
                                             <span class="finder__nav-item-title finder__nav-item-title--skill">Framework</span>
                                         </button>
                                     </li>
                                     <li>
                                         <button class="finder__nav-item finder__nav-item--skill" data-active="false">
-                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-easyleague"></i>
+                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-database_icon"></i>
                                             <span class="finder__nav-item-title finder__nav-item-title--skill">Database</span>
                                         </button>
                                     </li>
                                     <li>
                                         <button class="finder__nav-item finder__nav-item--skill" data-active="false">
-                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-mercure"></i>
+                                            <i class="finder__nav-item-icon finder__nav-item-icon--skill wf-icon-application_icon"></i>
                                             <span class="finder__nav-item-title finder__nav-item-title--skill">Software</span>
                                         </button>
                                     </li>
@@ -260,11 +277,103 @@
                                     <i class="finder__content-btn wf-icon-magnifying_glass"></i>
                                 </div>
                             </div>
-                            <div class="finder__container-content">
+                            <div class="finder__container-content finder__container-content--skill">
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                <div class="skill">
+                                    <img src="./resources/images/skills/programming/c-icon.svg" alt="" class="skill__icon">
+                                    <p class="skill__name">C language</p>
+                                </div>
+                                
+                                
                                 <!-- <div class="skeleton__thumbnail skeleton__animation"></div> -->
                                 <!-- Images container -->
                             </div>
                             <div class="finder__container-footer">
+                                <span class="finder__projects-numbers">Programming - X projects, 1000GB available</span>
                                 <!-- Footer -->
                             </div>
                         </div>

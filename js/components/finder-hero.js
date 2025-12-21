@@ -2,18 +2,18 @@
 
 var thumbnailProjects = undefined;
 var thumbnailImages = undefined;
-var navItems = undefined;
+var navHeroItems = undefined;
 var rotation = undefined;
 
 /**
  * All events
  */
-const finderEvents = () => {
-    getData();
+const finderHeroEvents = () => {
+    getHeroData();
     hoveringDetection();
 };
 
-const getData = () => {
+const getHeroData = () => {
     readJSON("/resources/json/hero.json", createHeroFinder);
 };
 
@@ -71,11 +71,11 @@ const createHeroFinder = (data) => {
     footer.innerHTML = "";
     footer.insertAdjacentHTML("beforeend", numbers);
 
-    navItems = document.querySelectorAll(".finder__nav-item--project");
+    navHeroItems = document.querySelectorAll(".finder__nav-item--project");
     thumbnailImages = document.querySelectorAll(".project-thumbnail");
 
     getThumbnails(0);
-    navSelection();
+    navHeroSelection();
     rotationSelection();
 };
 
@@ -108,14 +108,14 @@ const getThumbnails = (id) => {
 /**
  * Add listeners to all navigation buttons.
  */
-const navSelection = () => {
-    if (navItems.length <= 0) {
+const navHeroSelection = () => {
+    if (navHeroItems.length <= 0) {
         console.error("No project item found");
         return;
     }
 
-    for (let i = 0; i < navItems.length; i++) {
-        const navItem = navItems[i];
+    for (let i = 0; i < navHeroItems.length; i++) {
+        const navItem = navHeroItems[i];
         navItem.addEventListener("click", () => {
             const newActive = navItem.getAttribute("data-active");
             const currentActive = document.querySelector(
@@ -136,17 +136,17 @@ const navSelection = () => {
  */
 const rotationSelection = () => {
     rotation = setInterval(() => {
-        for (let i = 0; i < navItems.length; i++) {
-            if (i + 1 == navItems.length) {
-                navItems[i].setAttribute("data-active", "false");
-                navItems[0].setAttribute("data-active", "true");
+        for (let i = 0; i < navHeroItems.length; i++) {
+            if (i + 1 == navHeroItems.length) {
+                navHeroItems[i].setAttribute("data-active", "false");
+                navHeroItems[0].setAttribute("data-active", "true");
                 getThumbnails(0);
                 break;
             }
 
-            if (navItems[i].getAttribute("data-active") == "true") {
-                navItems[i].setAttribute("data-active", "false");
-                navItems[i + 1].setAttribute("data-active", "true");
+            if (navHeroItems[i].getAttribute("data-active") == "true") {
+                navHeroItems[i].setAttribute("data-active", "false");
+                navHeroItems[i + 1].setAttribute("data-active", "true");
                 getThumbnails(i + 1);
                 break;
             }
@@ -165,6 +165,6 @@ const hoveringDetection = () => {
     });
 
     navigation.addEventListener("mouseout", () => {
-        rotationSelection(navItems);
+        rotationSelection(navHeroItems);
     });
 };

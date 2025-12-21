@@ -1,0 +1,22 @@
+.finder__container-content--skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--base-spacer);
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill__icon {
+    width: 45px;
+    aspect-ratio: 1;
+}
+
+.skill__name {
+    color: var(--davys-gray);
+    font-size: clamp(8px, 1vw, var(--content-font));
+}
